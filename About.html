@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About San Marcos Helping Hands</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://lh3.googleusercontent.com/proxy/9_BmlMtdgpIDoVtYu4rzbgKpTDi1omjsMoN2uEttNFcpHheHScb3GEsv26jqG19Hj9nQOhkyzZ9nnvus880BZl4_IhZJXi8jmVu_oWTMElCVCNpQdDVDlv05FX89IUWO-IOfL5S1UDJMfdBz5WNSgQmSnzzJiw);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(220, 208, 204, 0.9);
+            padding: 10px 20px;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures the nav bar stays above other content */
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4a90e2; /* Adds a hover effect */
+        }
+
+        /* Responsive Navigation Bar */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0; /* Adds spacing between links */
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(220, 208, 204, 0.9);
+            border-bottom: 3px solid black;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #333;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .link {
+            padding: 10px 30px;
+            background-color: #ffb561;
+            color: rgb(190, 0, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            border: 2px solid rgb(190, 0, 0);
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+        }
+
+        .link:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .goal {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .goal div {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(220, 208, 204, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(220, 208, 204, 0.9);
+            border-top: 3px solid black;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #333;
+        }
+		/* Team Members Section */
+	.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+		.member {
+    text-align: center;
+    background-color: rgba(220, 208, 204, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+.member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+	/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-out;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #4a90e2;
+    transform: translateY(-3px); /* Adds a slight upward movement */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.link {
+    padding: 10px 30px;
+    background-color: #ffb561;
+    color: rgb(190, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    border: 2px solid rgb(190, 0, 0);
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    animation: pulse 2s infinite; /* Adds a continuous pulse effect */
+}
+
+.link:hover {
+    background-color: #0056b3;
+    color: white;
+    animation: none; /* Stops the pulse effect on hover */
+}
+
+.member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member img:hover {
+    transform: scale(1.1); /* Slightly enlarges the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
+
+/* Background Animation */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://lh3.googleusercontent.com/proxy/9_BmlMtdgpIDoVtYu4rzbgKpTDi1omjsMoN2uEttNFcpHheHScb3GEsv26jqG19Hj9nQOhkyzZ9nnvus880BZl4_IhZJXi8jmVu_oWTMElCVCNpQdDVDlv05FX89IUWO-IOfL5S1UDJMfdBz5WNSgQmSnzzJiw');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    animation: moveBackground 20s linear infinite; /* Adds a subtle background movement */
+}
+</style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="get involved.html">Get Involved</a>
+        <a href="Services.html">Services</a>
+    </nav>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>San Marcos Helping Hands and Fun Drive</h1>
+            <p>For Sta. Maria De Matthias Center Orphanage</p>
+        </header>
+
+        <!-- About the Orphanage Section -->
+        <section>
+            <h2>About Sta. Maria De Matthias Center Orphanage</h2>
+            <p>
+                Sta. Maria De Matthias Orphanage Center is a sanctuary for boys and girls of all ages located in Marikina City, Philippines. 
+                The orphanage provides a safe and nurturing environment for children who have lost their families or are in need of care.
+            </p>
+            <p>
+                <strong>Address:</strong> 112 IPIL STREET, MARIKINA HEIGHTS 1810 MARIKINA CITY
+            </p>
+            <a class="link" href="https://www.facebook.com/love0charity/" target="_blank">Visit Their Facebook Page</a>
+        </section>
+
+        <!-- Our Goal Section -->
+        <section>
+            <h2>Our Goal</h2>
+            <div class="goal">
+                <div>
+                    <h3>What We Aim to Achieve</h3>
+                    <p>
+                        Our primary goal is to bring joy, support, and hope to the children of Sta. Maria De Matthias Orphanage. 
+                        We aim to provide them with essential items, emotional support, and memorable experiences.
+                    </p>
+                </div>
+                <div>
+                    <h3>How We Plan to Do It</h3>
+                    <p>
+                        Through donations of gently used toys, clothes, and other necessities, as well as organizing fun activities, 
+                        we strive to make a positive impact on their lives.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals and Plans Section -->
+        <section>
+            <h2>Our Plans</h2>
+            <p>
+                For our project, we aim to bring joy and support to the children of Sta. Maria De Matthias Orphanage through donations and meaningful interactions.
+            </p>
+            <h3>Our Plan</h3>
+            <ul>
+                <li>Donate gently used toys, clothes, and essential items.</li>
+                <li>Organize fun activities and games to entertain the children.</li>
+                <li>Spend quality time with the kids to provide emotional support and companionship.</li>
+            </ul>
+        </section>
+
+
+		<!-- Members Section -->
+	
+	<section>
+    <h2>Our Team</h2>
+    <div class="team-members">
+        <!-- Cedric Maala -->
+        <div class="member">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVQZzM_8Q5RsfDMZvY8auBmw73YPrLTEqHeIxH2nmkUB8PflC8=s88-w88-h88-c-k-no" alt="Cedric Maala">
+            <h3>Cedric Maala</h3>
+        </div>
+
+        <!-- Don Mendoza -->
+        <div class="member">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXm2XFzin36psGLrY3dH-4NJ1ywABVLSaYA-o3mDCpoeZuar5Gz=s88-w88-h88-c-k-no" alt="Don Mendoza">
+            <h3>Don Mendoza</h3>
+        </div>
+
+        <!-- Ethan Luces -->
+        <div class="member">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjX9i5xhqitcMS272_6UpmZciJUZWq2n4x97anscCLvA-QQjxWU=s88-w88-h88-c-k-no" alt="Ethan Luces">
+            <h3>Ethan Luces</h3>
+        </div>
+
+        <!-- Enzo Natera -->
+        <div class="member">
+            <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEUh1Lq9lSIE5A3Dfac9hgrk4UduzF525NMpqac%2BaOa8rDmSytcG95IHbyM3lt5JxPrIU9Acl96R8fvS8jb7geHg3Um%2BRgyX%2BCbpZxjkRmDOCHef8mFZ2nBA1uAx8NpTfMr1Dz2n9OnmbBi0%2BGOKldNGIWFQpA5TJLNfsJ024lbXs5S6J6%2BsZrP%2BEyoaEHaD92xUSBi9HYV2Q8svia9BC1yN0DmERJRApUteUIEfzTJzaPNkSctMEupt6wLki8BpAPiG5uCnTQI4kgqyMYupV6Vyvyq8vgQSRXBewWlQYSr0%2FSq1G3V3bjVhp8BL5mf42TeP5xmfYd9nYrXgNt%2BvEK7Gn%2BMhX9DnpG4SxXI59vUXMkP7qyWjXBESGYW64Yh72CQ67Nln8EGhzgWjJIwRoAajomJ2f0UgbJC%2B5rproiBDx5xVPIY10YIO4g34%2F8aI8C6lxHe8mTwYjDjRf0pcSZsX9%2BGDogSpmOtIl1Ijn8jb69hxuVyqsGlHsN4sAnqkJRuutY5XhO9ykjPh52zreAbuqiSm4TIkGs8%2FksXoru4Ab%2F7rj3blf%2BH0bn5C7D7%2B56YxC%2Bg8&allow_caching=true&sz=w512" alt="Enzo Natera">
+            <h3>Enzo Natera</h3>
+        </div>
+
+        <!-- Enoch Morales -->
+        <div class="member">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWJ6x4Yp7JwmlY5GCosjAsAj5XX06Os2ruU4NALy-1H1vvG0EM_=s80-p-k-rw-no" alt="Enoch Morales">
+            <h3>Enoch Morales</h3>
+        </div>
+    </div>
+	</section>
+       
+	   <!-- Footer Section -->
+        <footer>
+            <p>© 2024 Enoch Nathaniel V. Morales SIP Group 5</p>
+        </footer>
+    </div>
+</body>
+</html>

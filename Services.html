@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Marcos Helping Hands and Fun Drive Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+         /* Navigation Bar */
+        nav {
+            background-color: rgba(220, 208, 204, 0.9);
+            padding: 10px 20px;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures the nav bar stays above other content */
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4a90e2; /* Adds a hover effect */
+        }
+
+        /* Responsive Navigation Bar */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0; /* Adds spacing between links */
+            }
+        }
+		
+		
+		
+		body {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            background-image: url(https://cdn.vectorstock.com/i/500p/36/11/hands-donate-hearts-charity-volunteer-vector-34943611.jpg);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        header {
+            background-color: rgba(220, 208, 204, 0.9);
+            color: #000;
+            padding: 25px;
+            text-align: center;
+            border: 3px solid black;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.2;
+            word-wrap: break-word;
+            max-width: 90%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(220, 208, 204, 0.9);
+            border: 3px solid black;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        blockquote {
+            font-size: 24px;
+            line-height: 1.6;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 3px solid black;
+            color: #000;
+            border-radius: 10px;
+        }
+
+        blockquote b {
+            font-size: 28px;
+            color: #4a90e2;
+        }
+
+        blockquote br {
+            margin-bottom: 10px;
+        }
+
+        blockquote:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>San Marcos Helping Hands and Fun Drive Program</h1>
+    </header>
+	<nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="get involved.html">Get Involved</a>
+        <a href="Service.html">Services</a>
+    </nav>
+    <main>
+        <blockquote>
+            <b>What do we offer?</b>
+            <br><br>
+            Our program focuses on bringing joy and support to children in need. We organize a <b>donation drive</b> where you can contribute second-hand or new items like clothes, toys, books, and school supplies. Every donation, no matter how small, makes a big difference in their lives.
+            <br><br>
+            In addition to the donation drive, we host a variety of <b>fun activities</b> to engage and uplift the children. These include interactive games🎲, live performances by dancers🕺 and singers🎤, and creative workshops where they can explore art and music.
+            <br><br>
+            Join us in making a positive impact! Together, we can bring smiles, hope, and happiness to these children. 💖
+        </blockquote>
+    </main>
+</body>
+</html>

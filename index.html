@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Outreach Program</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Calibri', sans-serif;
+            height: 100%;
+            background-image: url(https://lh3.googleusercontent.com/proxy/9_BmlMtdgpIDoVtYu4rzbgKpTDi1omjsMoN2uEttNFcpHheHScb3GEsv26jqG19Hj9nQOhkyzZ9nnvus880BZl4_IhZJXi8jmVu_oWTMElCVCNpQdDVDlv05FX89IUWO-IOfL5S1UDJMfdBz5WNSgQmSnzzJiw);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(220, 208, 204, 0.9);
+            padding: 10px 20px;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures the nav bar stays above other content */
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4a90e2; /* Adds a hover effect */
+            transform: translateY(-3px); /* Adds a slight upward movement */
+        }
+
+        /* Responsive Navigation Bar */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0; /* Adds spacing between links */
+            }
+        }
+
+        .header {
+            text-align: center;
+            background-color: #dcd0cc;
+            padding: 80px 20px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-bottom: 3px solid #333;
+            animation: bounce 2s ease-in-out;
+        }
+
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            margin-right: 30px;
+            margin-left: -20px;
+            animation: rotate 5s linear infinite;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            color: #333333;
+            margin-top: 20px;
+            animation: slideInLeft 1.5s ease-in-out;
+        }
+
+        .header p {
+            color: #4B4B4B;
+            font-size: 25.6px;
+            margin-top: 10px;
+            animation: slideInRight 1.5s ease-in-out;
+        }
+
+        .division-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: rgba(220, 208, 204, 0.9);
+            margin: 40px 10%;
+            border-radius: 10px;
+            gap: 30px;
+            animation: slideInUp 2s ease-in-out;
+        }
+
+        .left, .right {
+            width: 48%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .left:hover, .right:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .left img, .right img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .left img:hover, .right img:hover {
+            transform: scale(1.05); /* Reduced scale and removed rotation */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #dcd0cc;
+            color: black;
+            width: 100%;
+            position: relative;
+            z-index: 100;
+            animation: slideInUp 2.5s ease-in-out;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <!-- Updated Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="get involved.html">Get Involved</a>
+        <a href="Services.html">Services</a>
+    </nav>
+
+    <div class="header">
+        <img src="https://img.freepik.com/premium-vector/illustrated-hands-holding-red-heart-symbolizing-love-care_1058532-32833.jpg" alt="Outreach Image">
+        <div>
+            <h1>San Marcos Helping Hand</h1>
+            <p>Giving is Wealth!</p>
+        </div>
+    </div>
+
+    <div class="division-section">
+        <div class="left">
+            <h2>Who Do We Want to Help?</h2>
+            <p>The youth of Sta Maria De Matthias Center.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYpQ-9cgM29DJrVHX75vuj3YCpPCPdFvpapw&s" alt="Helping Image">
+        </div>
+
+        <div class="right">
+            <h2>What We Strive to Be</h2>
+            <p>To be like our patron Saint, Saint Mark, as he encourages us to have humility and service.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiuhAHuWmTLNQsgqZlxxTKQs16DBF6pDBRZQ&s" alt="Striving Image">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 | All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
